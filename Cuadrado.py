@@ -1,9 +1,9 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-from Contenedor import Contenedor
+from Forma import Forma
 
-class Habitacion(Contenedor):
+class Cuadrado(Forma):
     def __init__(self):
         self.norte = None
 

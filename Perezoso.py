@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-from Pared import Pared
+from Modo import Modo
 
-class ParedBomba(Pared):
+class Perezoso(Modo):
     pass

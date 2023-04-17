@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-from Pared import Pared
+from Ente import Ente
 
-class ParedBomba(Pared):
+class Personaje(Ente):
     pass

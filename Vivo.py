@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-from Pared import Pared
+from Estado import Estado
 
-class ParedBomba(Pared):
+class Vivo(Estado):
     pass

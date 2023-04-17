@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-from ElementoMapa import ElementoMapa
+from Hoja import Hoja
 
-class Decorator(ElementoMapa):
+class Decorator(Hoja):
     pass
