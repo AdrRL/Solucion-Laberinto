@@ -5,5 +5,5 @@ from Contenedor import Contenedor
 
 class Habitacion(Contenedor):
     def __init__(self):
-        self.norte = None
+        pass
 

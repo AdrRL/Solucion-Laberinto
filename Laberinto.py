@@ -2,4 +2,7 @@
 #-*- coding: utf-8 -*-
 
 class Laberinto:
-    pass
+    
+    def __init__(self):
+        pass
+
