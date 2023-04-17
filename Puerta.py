@@ -4,8 +4,8 @@
 from ElementoMapa import ElementoMapa
 
 class Puerta(ElementoMapa):
-    def __init__(self):
-        self.abierta = None
-        self.lado1 = None
-        self.lado2 = None
+    def __init__(self, l1, l2):
+        self.abierta = False
+        self.lado1 = l1
+        self.lado2 = l2
 
