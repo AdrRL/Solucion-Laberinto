@@ -9,41 +9,25 @@ from Puerta import Puerta
 
 class Juego:
 
-        #Código que se recibirá
-        #{
-	    #    "laberinto":[
-		#        {"tipo":"habitacion","num":1,"hijos":[
-		#	        {"tipo":"tunel"}
-		#        ]},
-		#        {"tipo":"habitacion","num":2,"hijos":[
-		#	        {"tipo":"armario", "num":1, "hijos":[]}
-		#        ]}
-	    #    ],
-	    #"puertas":[[1,"Sur",2,"Norte"]],
-	    #"bichos":[]
-        #}
-
-
-    def __init__(self, archivo):
-        self.conf = archivo
-        with open(self.conf, 'r', encoding='utf8') as file:
-            self.archivo = json.load(file)
+    #Constructor equivalente al "initialize" de "Juego"
+    def __init__(self):
         self.bichos=[]
         self.hilos={}
 
-
+    #Se ha modificado la puerta
     def laberinto2habitaciones(self):
         self.laberinto = self.fabricarLaberinto()
 
         habitacion1 = self.fabricarHabitacion(1)
         habitacion2 = self.fabricarHabitacion(2)
+        puerta = self.fabricarPuerta(habitacion1, habitacion2)
 
         habitacion1.ponerNorte(self.fabricarPared())
         habitacion1.ponerEste(self.fabricarPared())
         habitacion1.ponerOeste(self.fabricarPared())
-        habitacion1.ponerSur(self.fabricarPuerta(habitacion1, habitacion2))
+        habitacion1.ponerSur(puerta)
 
-        habitacion2.ponerNorte(self.fabricarPuerta(habitacion1, habitacion2))
+        habitacion2.ponerNorte(puerta)
         habitacion2.ponerEste(self.fabricarPared())
         habitacion2.ponerOeste(self.fabricarPared())
         habitacion2.ponerSur(self.fabricarPared())
@@ -51,7 +35,6 @@ class Juego:
 
     def fabricarHabitacion(self, unNum):
         habitacion = habitacion (unNum)
-
         return habitacion
 
     def fabricarLaberinto(self):
