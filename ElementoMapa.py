@@ -3,8 +3,22 @@
 
 class ElementoMapa:
     def __init__(self):
-        pass
+        self.padre  = None
 
-    def entrar(self, ):
-        pass
+    def esArmario(self):
+        return False
+    
+    def esBomba(self):
+        return False
+    
+    def esHabitacion(self):
+        return False
+    
+    def esPared(self):
+        return False
+    
+    def esPuerta(self):
+        return False
+    
+
 
