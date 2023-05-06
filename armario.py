@@ -3,7 +3,7 @@
 
 from Contenedor import Contenedor
 
-class armario(Contenedor):
+class Armario(Contenedor):
     def __init__(self, num):
         super().__init__(num)
 
