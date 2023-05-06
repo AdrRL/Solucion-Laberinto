@@ -5,3 +5,6 @@ from Modo import Modo
 
 class Perezoso(Modo):
     pass
+
+    def esPerezoso(self):
+        return True

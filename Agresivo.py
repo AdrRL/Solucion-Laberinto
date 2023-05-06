@@ -5,3 +5,6 @@ from Modo import Modo
 
 class Agresivo(Modo):
     pass
+
+    def esAgresivo(self):
+        return True
