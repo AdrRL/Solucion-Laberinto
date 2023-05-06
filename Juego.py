@@ -119,11 +119,11 @@ class Juego:
     def fabricarArmario(self, unCont):
         numero = len(unCont.hijos) + 1
         armario = Armario(numero)
-        armario.ponerElemento(Norte(), Pared())
-        armario.ponerElemento(Este(), Pared())
-        armario.ponerElemento(Oeste(), Pared())
+        armario.ponerElemento(self.fabricarNorte(), self.fabricarPared())
+        armario.ponerElemento(self.fabricarEste(), self.fabricarPared())
+        armario.ponerElemento(self.fabricarOeste(), self.fabricarPared())
 
-        armario.agregarOrientacion(Norte(), Sur(), Este(), Oeste())
+        armario.agregarOrientacion(self.fabricarNorte(), self.fabricarSur(), self.fabricarEste(), self.fabricarOeste())
 
         puerta = Puerta(armario, unCont)
         armario.ponerElemento(Sur(), puerta)
