@@ -4,4 +4,6 @@
 from Orientacion import Orientacion
 
 class Este(Orientacion):
-    pass
+    
+    def ponerElemento(self, unEm, unaHab):
+        unaHab.este = unEm

@@ -2,4 +2,6 @@
 #-*- coding: utf-8 -*-
 
 class Orientacion:
-    pass
+    
+    def ponerElemento(self, unEm, unaHab):
+        pass

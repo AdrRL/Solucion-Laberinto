@@ -10,6 +10,10 @@ class Contenedor(ElementoMapa):
         self.hijos = []
         self.orientaciones = []     #En la solución actual ya no es así
         self.num = num
+        self.norte = None
+        self.sur = None
+        self.este = None
+        self.oeste = None
 
     def agregarHijo(self, unEm):
         unEm.padre = self
