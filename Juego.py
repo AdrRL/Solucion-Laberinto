@@ -42,10 +42,10 @@ class Juego:
     def laberinto4habitaciones(self):
         self.laberinto = self.fabricarLaberinto()
 
-        habitacion1 = self.fabricarHabitacion(1)
-        habitacion2 = self.fabricarHabitacion(2)
-        habitacion3 = self.fabricarHabitacion(3)
-        habitacion4 = self.fabricarHabitacion(4)
+        habitacion1 = self.fabricarHabitacion(0)
+        habitacion2 = self.fabricarHabitacion(1)
+        habitacion3 = self.fabricarHabitacion(2)
+        habitacion4 = self.fabricarHabitacion(3)
         puerta1 = self.fabricarPuerta(habitacion1, habitacion2)
         puerta2 = self.fabricarPuerta(habitacion2, habitacion4)
         puerta3 = self.fabricarPuerta(habitacion3, habitacion4)
@@ -75,7 +75,7 @@ class Juego:
 
 
     def fabricarHabitacion(self, unNum):
-        habitacion = habitacion (unNum)
+        habitacion = Habitacion (unNum)
         habitacion.ponerElemento(self.fabricarNorte(), self.fabricarPared())
         habitacion.ponerElemento(self.fabricarSur(), self.fabricarPared())
         habitacion.ponerElemento(self.fabricarEste(), self.fabricarPared())
