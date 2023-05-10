@@ -60,6 +60,7 @@ class Juego:
         for i in habitacion2.hijos:
             if i.esArmario():
                 i.agregarHijo(self.fabricarBomba())
+        
 
         habitacion3.ponerElemento(self.fabricarEste(), puerta3)
         habitacion3.ponerElemento(self.fabricarNorte(), puerta4)

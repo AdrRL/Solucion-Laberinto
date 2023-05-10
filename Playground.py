@@ -7,11 +7,11 @@ if __name__ == "__main__":
     juego = Juego()
     juego.laberinto4habitaciones()
     print("Número de habitaciones: ", juego.numeroHabitaciones())
-    print("Información de las habitaciones \n")
+    print("Información de creación de las habitaciones \n")
     for i in range(0, juego.numeroHabitaciones()):
         aux = juego.obtenerHabitacion(i)
         print("Habitacion ", i)
-        print(type(aux))
+        print("Clase de la habitación:" , type(aux))
         print("Norte    - Pared  : ",  aux.norte.esPared())
         print("Norte    - Puerta : ",  aux.norte.esPuerta())
         print("Sur      - Pared  : ",  aux.sur.esPared())
@@ -22,5 +22,23 @@ if __name__ == "__main__":
         print("Oeste    - Puerta : ",  aux.oeste.esPuerta())
         print("--------------------")
 
+    print("\nAhora se verán los contenedores correspondientes")
+    print("--------------------")
+    hab2 = juego.obtenerHabitacion(1)
+    print("Habitación 2")
+    for aux in hab2.hijos:
+        print("Clase del hijo:" , type(aux))
+        print("¿Tiene algo dentro? -> ", not len(aux.hijos)==0)
+        for aux2 in aux.hijos:
+            print("¿Es bomba?", aux2.esBomba())
+    
+    print("--------------------")
+    hab3 = juego.obtenerHabitacion(2)
+    print("\nHabitación 3")
+    for aux in hab3.hijos:
+        print("Clase del hijo:" , type(aux))
+        print("¿Tiene algo dentro? -> ", not len(aux.hijos)==0)
+
+    
 
 
