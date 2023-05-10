@@ -40,5 +40,38 @@ if __name__ == "__main__":
         print("¿Tiene algo dentro? -> ", not len(aux.hijos)==0)
 
     
+    print("\n\n----------------------------------")
+    print("Interacción con el usuario")
+    for i in range(0, juego.numeroHabitaciones()):
+        aux = juego.obtenerHabitacion(i)
+        aux.entrar()
+        aux.norte.entrar()
+        aux.este.entrar()
+        aux.sur.entrar()
+        aux.oeste.entrar()
+
+        print("Abrimos puertas")
+        juego.abrirPuertas()
+        aux.norte.entrar()
+        aux.este.entrar()
+        aux.sur.entrar()
+        aux.oeste.entrar()
+        juego.cerrarPuertas()
+        print("------------")
+    
+    print("La bomba, en habitación 2")
+    hab2 = juego.obtenerHabitacion(1)
+    for aux in hab2.hijos:
+        for aux2 in aux.hijos:
+                if aux2.esBomba():
+                    aux2.activar()
+                aux2.entrar()
+    for aux in hab2.hijos:
+        for aux2 in aux.hijos:
+                if aux2.esBomba():
+                    aux2.desactivar()
+                aux2.entrar()
+
+
 
 

@@ -20,7 +20,7 @@ class Bomba(Decorator):
         if self.activa:
             print("Bomba ha explotado")
         else:
-            print("Bomba desactivada")
+            print("Bomba desactivada, no pasa nada")
     
     def esBomba(self):
         return True

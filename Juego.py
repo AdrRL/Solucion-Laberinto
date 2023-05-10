@@ -100,8 +100,15 @@ class Juego:
     
     def abrirPuertas(self):
         for elemento in self.laberinto.hijos:
-            if elemento.esPuerta:
-                elemento.abrir()
+            if elemento.esHabitacion:
+                if elemento.norte.esPuerta():
+                    elemento.norte.abrir()
+                if elemento.sur.esPuerta():
+                    elemento.sur.abrir()
+                if elemento.este.esPuerta():
+                    elemento.este.abrir()
+                if elemento.oeste.esPuerta():
+                    elemento.oeste.abrir()
 
     def activarBombas(self):
         for elemento in self.laberinto.hijos:
@@ -113,8 +120,15 @@ class Juego:
     
     def cerrarPuertas(self):
         for elemento in self.laberinto.hijos:
-            if elemento.esPuerta:
-                elemento.abierta = False
+            if elemento.esHabitacion:
+                if elemento.norte.esPuerta():
+                    elemento.norte.abierta=False
+                if elemento.sur.esPuerta():
+                    elemento.norte.abierta=False
+                if elemento.este.esPuerta():
+                    elemento.norte.abierta=False
+                if elemento.oeste.esPuerta():
+                    elemento.norte.abierta=False
     
     def desactivarBombas(self):
         for elemento in self.laberinto.hijos:
